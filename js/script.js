@@ -1,3 +1,22 @@
+var keysDown = {}; // object to save the state of keysand 2 event listeners to detect keyboard activity
+     addEventListener("keydown", function (e) {
+     addEventListener("keyup", function (e) {
+})
+})
+
+        // The main game loop
+        var main = function () {
+            var now = Date.now();
+            var delta = now - then;
+            update(delta / 1000);
+            render();
+            then = now;
+            //  Request to do this again ASAP
+            requestAnimationFrame(main);
+        };
+  
+        
+
 window.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.tile'));
     const playerDisplay = document.querySelector('.display-player');
@@ -133,6 +152,4 @@ document.onclick = function() {
 });
 
 alert("The game is played on a grid that's 3 squares by 3 squares. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares. The first player to get 3 marks in a row (up, down, across, or diagonally) is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.");
-
-
 
