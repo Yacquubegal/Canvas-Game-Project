@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kaushan Script', cursive;
+  }
+  
+
+  
+  .title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+  }
+  
+  .display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+  
+  }
+  
+  .tile {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  
+  .playerX {
+    color: #b3d614;
+  }
+  
+  .playerO {
+    color: #7849fb;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+  }
+  
+  .controls button {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+  
+  .restart {
+    background-color: #a79813;
+  }
+  
+  #reset {
+    background-color: #8f0d59;
+  }
+
+  @keyframes bgcolor {
+    0% {
+        background-color: #115e94
+    }
+
+    30% {
+        background-color: #398a11
+    }
+
+    60% {
+        background-color: #aa4f12
+    }
+
+    90% {
+        background-color: rgb(165, 19, 43)
+    }
+
+    100% {
+        background-color: #5d209b
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
