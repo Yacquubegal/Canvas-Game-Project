@@ -61,12 +61,15 @@ window.addEventListener('DOMContentLoaded', () => {
         switch(type){
             case PLAYERO_WON:
                 announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+                alert("You won, congratulations!");
                 break;
             case PLAYERX_WON:
                 announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+                alert("Gotcha! I win!"); 
                 break;
             case TIE:
                 announcer.innerText = 'Tie';
+                alert("We tied."); 
         }
         announcer.classList.remove('hide');
     };
@@ -128,4 +131,8 @@ document.onclick = function() {
 
     resetButton.addEventListener('click', resetBoard);
 });
+
+alert("The game is played on a grid that's 3 squares by 3 squares. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares. The first player to get 3 marks in a row (up, down, across, or diagonally) is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.");
+
+
 
